@@ -3,10 +3,14 @@
 name: CI
 
 # Controls when the workflow will run
-on:
+env:
+  BRANCH: ${GITHUB_REF##*/}
 
+on:
   push:
-    branches: [ GITHUB_REF##*/ ]
+    branches:
+      - ${{env.BRANCH}}
+
 
 
   # Allows you to run this workflow manually from the Actions tab
