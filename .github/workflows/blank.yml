@@ -36,4 +36,4 @@ jobs:
         run: |
           echo ${{ env.SECRET_TOKEN_NAME }}
         env:
-          SECRET_TOKEN: ${{ SECRET_TOKEN_NAME }}
+          SECRET_TOKEN: ${{ secrets[env.SECRET_TOKEN_NAME] }}
