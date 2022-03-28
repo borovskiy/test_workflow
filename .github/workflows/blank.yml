@@ -5,7 +5,9 @@ name: CI
 # Controls when the workflow will run
 env:
   BRANCH: ${GITHUB_REF##*/}
-
+  main: 111
+  branch1: 222
+  
 on:
   push:
     branches:
@@ -33,4 +35,4 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          echo ${{env.BRANCH}}
+          echo ${{env.${{${GITHUB_REF##*/}}} }}
