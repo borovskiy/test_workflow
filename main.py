@@ -1,2 +1,3 @@
 import os
-print(f"{os.environ['SECRET_TOKEN']} sssss")
+x = os.environ['SECRET_TOKEN']
+print(f"{x} sssss")
