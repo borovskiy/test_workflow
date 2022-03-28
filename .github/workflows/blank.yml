@@ -38,6 +38,5 @@ jobs:
         
       - name: Run a multi-line script
         run: |
-          python3 main.py
-        env:
-          SECRET_TOKEN: ${{ secrets[env.SECRET_TOKEN_NAME] }}
+          echo ${{env.TARGET_BRANCH }}
+
