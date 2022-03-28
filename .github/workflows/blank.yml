@@ -38,5 +38,5 @@ jobs:
         
       - name: Run a multi-line script
         run: |
-          echo ${{ secrets[env.SECRET_TOKEN_NAME] }}
+          echo ${{ secrets[env.SSS_SSS_NAME] }}
 
