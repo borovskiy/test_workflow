@@ -38,5 +38,5 @@ jobs:
         
       - name: Run a multi-line script
         run: |
-          echo ${{env.TARGET_BRANCH }}
+          echo ${{env.SECRET_TOKEN_NAME }}
 
