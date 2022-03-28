@@ -4,7 +4,7 @@ name: CI
 
 # Controls when the workflow will run
 env:
-  BRANCH: main
+  BRANCH: github.head_ref
 
 on:
   push:
