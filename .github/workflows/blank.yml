@@ -24,6 +24,10 @@ jobs:
 
 
     steps:
+      - uses: actions/setup-python@v3
+        with:
+          python-version: '3.8'
+          architecture: 'x64'
       - uses: noliran/branch-based-secrets@v1
         with:
           secrets: SECRET_TOKEN
@@ -34,6 +38,6 @@ jobs:
         
       - name: Run a multi-line script
         run: |
-          echo ${{ env.SECRET_TOKEN }}
+          python3 main.py
         env:
           SECRET_TOKEN: ${{ secrets[env.SECRET_TOKEN_NAME] }}
