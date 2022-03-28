@@ -30,7 +30,7 @@ jobs:
           architecture: 'x64'
       - uses: noliran/branch-based-secrets@v1
         with:
-          secrets: SECRET_TOKEN
+          secrets: SSS_SSS
       - uses: actions/checkout@v2
       
       - name: Run a one-line script
