@@ -36,4 +36,4 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          echo ${{ secrets[env.SECRET_TOKEN_NAME] }}
+          echo ${{ env.SECRET_TOKEN_NAME }}
