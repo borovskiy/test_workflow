@@ -4,7 +4,7 @@ name: CI
 
 # Controls when the workflow will run
 env:
-  BRANCH: ${{ github.ref_name^^ }}
+  BRANCH: ${{ github.ref_name }}
 
   
 on:
@@ -25,5 +25,5 @@ jobs:
 
     steps:
       - id: toUpperCase
-        run: echo ${{env.BRANCH}}
+        run: echo ${{env.BRANCH^^}}
 
