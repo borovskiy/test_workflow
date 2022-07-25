@@ -4,7 +4,7 @@ name: CI
 
 # Controls when the workflow will run
 env:
-  BRANCH: $(echo $github.ref_name | tr '[:lower:]' '[:upper:]')
+  BRANCH: $(echo ${{github.ref_name}} | tr '[:lower:]' '[:upper:]')
   
 on:
   push:
