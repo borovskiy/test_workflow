@@ -25,4 +25,4 @@ jobs:
 
     steps:       
       - name: Run the action
-        run: echo ::set-env name=IMAGE_REPOSITORY::$(echo ${{ github.ref_name }} | tr '[:upper:]')
+        run: echo ::set-env name=IMAGE_REPOSITORY::$(echo ${{ github.ref_name }} | tr '[:lower:]' '[:upper:]')
