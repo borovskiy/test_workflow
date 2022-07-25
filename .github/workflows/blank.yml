@@ -25,5 +25,5 @@ jobs:
 
     steps:
       - id: toUpperCase
-      - run: echo ${{env.BRANCH}}
+        run: echo ${{env.BRANCH}}
 
