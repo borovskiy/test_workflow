@@ -25,4 +25,4 @@ jobs:
 
     steps:       
       - name: Run the action
-        run: echo inputStr.toUpperCase(${{ github.ref_name }})
+        run: echo ${{ github.ref_name.uppercase }}
