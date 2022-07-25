@@ -23,18 +23,6 @@ jobs:
     runs-on: ubuntu-latest
 
 
-    steps:
-      - uses: actions/setup-python@v3
-        with:
-          python-version: '3.8'
-          architecture: 'x64'
-      - uses: noliran/branch-based-secrets@v1
-        with:
-          secrets: SSS_SSS
-      - uses: actions/checkout@v2
-      
-      - name: Run a one-line script
-        run: echo Hello, world!
-        
-      - name: Run the action # You would run your tests before this using the output to set state/desc
-        run: echo {{ github.ref_name.uppercase }}
+    steps:       
+      - name: Run the action
+        run: echo ${{ github.ref_name.uppercase }}
