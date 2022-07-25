@@ -25,4 +25,4 @@ jobs:
 
     steps:       
       - name: Run the action
-        run: echo ${{ github.ref_name.uppercase }}
+        run: echo ${{ github.ref_name }}
