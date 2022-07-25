@@ -23,6 +23,8 @@ jobs:
     runs-on: ubuntu-latest
 
 
-    steps:       
-      - name: Run the action
-        run: echo ::set-env name=IMAGE_REPOSITORY::$(echo ${{ github.ref_name }} | tr '[:lower:]' '[:upper:]')
+    steps:
+      - id: toUpperCase
+        run: INPUT=${{ github.ref_name }} echo "::set-output name=upperCaseValue::${INPUT,,}"
+      - run: echo ${{steps.toUpperCase.outputs.upperCaseValue}}
+
