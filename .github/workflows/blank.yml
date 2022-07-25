@@ -4,7 +4,7 @@ name: CI
 
 # Controls when the workflow will run
 env:
-  BRANCH: ${{ github.ref_name }}
+  BRANCH: ${{ github.ref_name^^ }}
 
   
 on:
@@ -25,6 +25,5 @@ jobs:
 
     steps:
       - id: toUpperCase
-        run: INPUT=${{ env.BRANCH }} echo "::set-output name=upperCaseValue::${INPUT,,}"
-      - run: echo ${{steps.toUpperCase.outputs.upperCaseValue}}
+      - run: echo ${{env.BRANCH}}
 
